@@ -8,21 +8,51 @@
         <link rel="stylesheet" href="./style.css">
         <title>RGB Color Change</title>
     </head>
-    <body id="body">
-        <div class="container">
-            <h2 class="heading-primary">Change the background color randomly by generating RGB and HEX color</h2><br>
-            <div class="button-box">
-                <div class="color-box">
-                    <button class="btn" id="btnRGB">RGB COLOR</button><br>
-                    <div class="color-code-area" id="rgbValue">rgb(0, 0, 0)</div>
-                </div>
-                <div class="color-box">
-                    <button class="btn" id="btnHex">HEX COLOR</button><br>
-                    <div class="color-code-area" id="hexValue">#000000</div>
+    <body id="field">
+        <!-- main section start -->
+        <section>
+            <div class="container">
+                <h2 class="heading-primary">Change the background color randomly by generating RGB and HEX color</h2><br>
+                <div class="button-box">
+                    <div class="color-box">
+                        <button class="btn" id="btnRGB">RGB COLOR</button><br>
+                        <div class="color-code-area" id="rgbValue">rgb(0, 0, 0)</div>
+                    </div>
+                    <div class="color-box">
+                        <button class="btn" id="btnHex">HEX COLOR</button><br>
+                        <div class="color-code-area" id="hexValue">#000000</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
+        </section>
+        <!-- main section start -->
+
+        <!-- user input start -->
+        <section id="userField">
+                <h2 class="heading-primary">Put your own color code and show the color!</h2><br>
+            <div class="input-area">
+                <div class="color-box" id="rgbField">
+                    <h4 class="heading-primary">Here is color RGB!</h4><br><br>
+                    <div class="field">
+                        <button class="btn" id="rgbInputBtn">Show Your Color</button>
+                        <div class="input-box">rgb(
+                            <input class="code-box" value="" id="red" placeholder="00"> ,
+                            <input class="code-box" value="" id="green" placeholder="00"> ,
+                            <input class="code-box" value="" id="blue" placeholder="00"> )
+                        </div>
+                    </div>
+                </div>
+                <div class="color-box" id="hexField">
+                    <h4 class="heading-primary">Here is color HEXADECIMAL!</h4><br><br>
+                    <div class="field">
+                        <input class="code-box hex" value="" id="hexInput" placeholder="#000000">
+                        <button class="btn" id="hexInputBtn">Show Your Color</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- user input end -->
+
         <script src="./RGBcolor.js"></script>
     </body>
 </html>

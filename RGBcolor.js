@@ -11,6 +11,8 @@ window.onload = () => {
 function main() {
     rgbBtnHandler();
     hexBtnHandler ();
+    rgbInputBtnHandler ();
+    HexInputBtnHandler ();
 }
 
 // CREATE RGB COLOR GENERATE FUNCTION
@@ -29,11 +31,11 @@ function changeRGBcolor() {
 
 //RGB COLOR CHANGE FUNCTION HANDLER
 function rgbBtnHandler() {
-    const body = document.getElementById("body"); 
     const btnRGB = document.getElementById("btnRGB"); //catch the rgb color change button
     btnRGB.addEventListener('click', () => {
+    const resultField = document.getElementById("field"); 
     const rgbColor = changeRGBcolor();
-    body.style.background = rgbColor; 
+    resultField.style.background = rgbColor; 
 })
 }
 
@@ -52,11 +54,45 @@ function changeHEXcolor() {
 
 //HEX COLOR CHANGE FUNCTION HANDLER
 function hexBtnHandler () {
-    const body = document.getElementById("body");
     const btnHEX = document.getElementById("btnHex"); // catch the hex color change button
     btnHEX.addEventListener('click', () => {
+        const resultField = document.getElementById("field");
         const hexColor = changeHEXcolor();
-        body.style.background = hexColor;
-        console.log("hello color")
+        resultField.style.background = hexColor;
+    })
+}
+
+//CREATE INPUT RGB COLOR CODE VALUE
+function changeInputColorRGB () {
+    const red = document.getElementById("red").value; 
+    const green = document.getElementById("green").value; 
+    const blue = document.getElementById("blue").value; 
+    const rgbInputColor = `rgb(${red},${green},${blue})`
+    return rgbInputColor;
+}
+
+//CREATE INPUT HEX COLOR CODE VALUE
+function changeInputColorHEX () {
+    const colorHex = document.getElementById("hexInput").value;
+    const colorHexValue = `#${colorHex.toString(16)}`;
+    return colorHexValue;
+}
+
+//INPUT COLOR CHANGE BUTTON HANDLER
+function rgbInputBtnHandler () {
+    const rgbInputBtn = document.getElementById("rgbInputBtn");
+    rgbInputBtn.addEventListener("click", function() {
+        const userResultField = document.getElementById("rgbField");
+        userResultField.style.background = changeInputColorRGB ();
+    })
+}
+
+//INPUT COLOR CHANGE BUTTON HANDLER
+function HexInputBtnHandler () {
+    const hexInputBtn = document.getElementById("hexInputBtn");
+    hexInputBtn.addEventListener("click", function () {
+        const  userResultField = document.getElementById("hexField");
+        userResultField.style.background = changeInputColorHEX();
+        console.log("hello")
     })
 }
