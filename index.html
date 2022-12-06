@@ -4,14 +4,23 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
         <title>RGB Color Change</title>
     </head>
     <body id="body">
         <div class="container">
-            <h2 class="heading-primary">Change the background color by generating randomly RGB color</h2><br>
-            <div class="btn-box"><button class="btn" id="btnRGB">Change Color</button></div>
+            <h2 class="heading-primary">Change the background color randomly by generating RGB and HEX color</h2><br>
+            <div class="button-box">
+                <div class="color-box">
+                    <button class="btn" id="btnRGB">RGB COLOR</button><br>
+                    <div class="color-code-area" id="rgbValue">rgb(0, 0, 0)</div>
+                </div>
+                <div class="color-box">
+                    <button class="btn" id="btnHex">HEX COLOR</button><br>
+                    <div class="color-code-area" id="hexValue">#000000</div>
+                </div>
+            </div>
         </div>
         
         <script src="./RGBcolor.js"></script>
