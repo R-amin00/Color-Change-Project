@@ -9,7 +9,7 @@
 #field {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
-    background-color: rgb(195, 238, 160);
+    background-color: rgb(38,134,153);
 }
 
 .container {
@@ -99,7 +99,7 @@
 }
 
 .code-box:focus {
-    border:none;
+    outline:none;
 }
 
 .input-area {
